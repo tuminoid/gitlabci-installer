@@ -10,16 +10,12 @@ Vagrant.configure("2") do |config|
     config.vm.box = "hashicorp/precise64"
     # config.vm.box = "chef/ubuntu-14.04"
 
-    # Comment out if you only want CI
-    config.vm.provision :shell, :path => "install-gitlab.sh"
-    # Expose port 80 for Gitlab, use 443 if you manually configure SSL too
-    # On Linux, you need to use 8080 or some other port and have nginx proxy 80 to that port
-    config.vm.network :forwarded_port, guest: 80, host: 80
-    # config.vm.network :forwarded_port, guest: 443, host: 443
+    # Install CI
+    config.vm.provision :shell, :path => "install-gitlab-ci.sh"
 
-    # Uncomment these if you want Gitlab CI
-    # config.vm.provision :shell, :path => "install-gitlab-ci.sh"
-    # config.vm.network :forwarded_port, guest: 3000, host: 3000
+    # Expose port 3000 for GitlabCI, use 443 if you manually configure SSL too
+    config.vm.network :forwarded_port, guest: 3000, host: 3000
+    # config.vm.network :forwarded_port, guest: 443, host: 443
 
     # CI Runner cannot be automated in a full install as it needs a token from CI
     # Install it (from here to by hand), then go to ~gitlab_ci_runner/gitlab-ci-runner
