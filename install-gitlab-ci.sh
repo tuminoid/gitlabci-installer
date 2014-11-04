@@ -36,7 +36,7 @@ SERVERCI_NGINX_PORT="3000"
 # ---------------------------------------------
 
 # Rubygems server
-RUBYGEMS_SOURCE="http://rubygems.org"
+RUBYGEMS_SOURCE="https://rubygems.org"
 
 # worker processes
 UNICORN_WORKERS=2
