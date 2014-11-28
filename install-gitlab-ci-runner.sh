@@ -27,7 +27,7 @@ CIR_SPAWN_COUNT=1
 # ---------------------------------------------
 
 # Rubygems server
-RUBYGEMS_SOURCE="http://rubygems.org"
+RUBYGEMS_SOURCE="https://rubygems.org"
 
 
 
