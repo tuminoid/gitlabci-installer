@@ -34,6 +34,6 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.provider "lxc" do |v, override|
-    override.vm.box = "fgrehm/precise64-lxc"
+    override.vm.box = "fgrehm/trusty64-lxc"
   end
 end
