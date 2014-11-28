@@ -69,15 +69,15 @@ apt-get -y install python-software-properties || true
 
 # we need newer git than 1.7.9.5 in 12.04.2 LTS, so git-core ppa needs to be added
 apt-add-repository -y ppa:git-core/ppa
-# we also need ruby 2.0
+# we also need ruby 2.1
 add-apt-repository -y ppa:brightbox/ruby-ng-experimental
 apt-get -y update
 apt-get -y upgrade
 
-# install dependencies
+# install dependencies (1.9.1 is needed for mkmf)
 apt-get -y install curl build-essential checkinstall openssh-server git postfix redis-server logrotate \
-  ruby2.0 ruby2.0-dev
-update-alternatives --set ruby /usr/bin/ruby2.0
+  ruby2.1 ruby2.1-dev ruby1.9.1-dev
+update-alternatives --set ruby /usr/bin/ruby2.1
 
 # HACK: try three times, ssl has issues from time to time
 for i in 1 2 3; do
