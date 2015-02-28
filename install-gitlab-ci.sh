@@ -35,7 +35,7 @@ SERVERCI_NGINX_PORT="3000"
 # Defaults work just fine
 # ---------------------------------------------
 
-# Rubygems server
+# Rubygems server, consider using http://rubygems.org if bundler fails a lot
 RUBYGEMS_SOURCE="https://rubygems.org"
 
 # worker processes
