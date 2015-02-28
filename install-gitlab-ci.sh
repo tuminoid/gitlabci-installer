@@ -50,11 +50,9 @@ UNICORN_TIMEOUT=180
 #  --------------------------------
 #
 
-
 # All commands expect root access.
 [ "$(whoami)" != "root" ] && echo "error: need to be root" && exit 1
 
-# some helper exports
 GITLABCI_USER="gitlab_ci"
 CISUDO="sudo -u $GITLABCI_USER -H"
 CIHOME="/home/$GITLABCI_USER"
@@ -72,7 +70,6 @@ apt-add-repository -y ppa:git-core/ppa
 # we also need ruby 2.1
 add-apt-repository -y ppa:brightbox/ruby-ng-experimental
 apt-get -y update
-apt-get -y upgrade
 
 # install dependencies (1.9.1 is needed for mkmf)
 apt-get -y install curl build-essential checkinstall openssh-server git postfix redis-server logrotate \
