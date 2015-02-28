@@ -110,8 +110,8 @@ $CISUDO git checkout $TARGET_VERSION
 # configure ci
 $CISUDO cp config/application.yml.example config/application.yml
 $CISUDO sed -i "s,- 'https://gitlab.example.com/',- '$GITLAB_SERVER'," config/application.yml
-$GITSUDO sed -i "s,email_from: gitlab-ci@localhost,email_from: $GITLAB_EMAIL," config/application.yml
-$GITSUDO sed -i "s,support_email: support@localhost,support_email: $GITLAB_SUPPORT_EMAIL," config/application.yml
+$CISUDO sed -i "s,email_from: gitlab-ci@localhost,email_from: $GITLAB_EMAIL," config/application.yml
+$CISUDO sed -i "s,support_email: support@localhost,support_email: $GITLAB_SUPPORT_EMAIL," config/application.yml
 
 # configure puma
 $CISUDO cp config/unicorn.rb.example config/unicorn.rb
