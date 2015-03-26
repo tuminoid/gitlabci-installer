@@ -6,7 +6,7 @@
 
 
 # CI version to install (git tag/branch)
-TARGET_VERSION="v7.8.1"
+TARGET_VERSION="v7.9.1"
 
 # MySQL root password (will be used, not written)
 MYSQL_ROOT_PASSWORD="mysqlpass"
@@ -73,7 +73,7 @@ apt-get -y update
 
 # install dependencies (1.9.1 is needed for mkmf)
 apt-get -y install curl build-essential checkinstall openssh-server git postfix redis-server logrotate \
-  ruby2.1 ruby2.1-dev ruby1.9.1-dev
+  ruby2.1 ruby2.1-dev ruby1.9.1-dev nodejs
 update-alternatives --set ruby /usr/bin/ruby2.1
 
 # HACK: try three times, ssl has issues from time to time
