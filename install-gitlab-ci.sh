@@ -72,8 +72,7 @@ add-apt-repository -y ppa:brightbox/ruby-ng-experimental
 apt-get -y update
 
 # install dependencies (1.9.1 is needed for mkmf)
-apt-get -y install curl build-essential checkinstall openssh-server git postfix redis-server logrotate \
-  ruby2.1 ruby2.1-dev ruby1.9.1-dev nodejs
+apt-get -y install curl build-essential checkinstall openssh-server git postfix redis-server logrotate ruby2.1 ruby2.1-dev ruby1.9.1-dev nodejs
 update-alternatives --set ruby /usr/bin/ruby2.1
 
 # HACK: try three times, ssl has issues from time to time
