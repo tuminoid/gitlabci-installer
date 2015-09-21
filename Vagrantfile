@@ -1,7 +1,7 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-# Copyright 2012-2014 Tuomo Tanskanen <tuomo@tanskanen.org>
+# Copyright 2012-2015 Tuomo Tanskanen <tuomo@tanskanen.org>
 
 Vagrant.configure("2") do |config|
 
