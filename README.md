@@ -12,3 +12,8 @@ Releases
 ========
 
 Check tags for releases matching GitLab CI releases.
+
+Notes
+=====
+
+From Gitlab 8.0 forward, CI has been merged into Gitlab itself.
