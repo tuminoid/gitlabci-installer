@@ -16,4 +16,4 @@ Check tags for releases matching GitLab CI releases.
 Notes
 =====
 
-From Gitlab 8.0 forward, CI has been merged into Gitlab itself.
+From Gitlab 8.0 forward, CI has been merged into Gitlab itself. This installer is thus becoming obsolete.
